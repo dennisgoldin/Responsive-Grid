@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', 'Calibri', Arial, sans-serif;
+}
+
+.grid {
+	margin: 35px 0 0 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	width: 100%;
+}
+
+.container {  /* ul li */
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: calc(100% / 6);  /* 6 columns */
+}
+
+.imageLink {  /* ul li a */
+	display: block;
+	width: 100%;
+}
+
+.bgImage {  /* ul li a img */
+	max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+.hoverBox {  /* ul li a div */
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	background: rgba(71,163,218,0.2);
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+}
+
+.imageLink:hover .hoverBox {  /* ul li a:hover div */
+	opacity: 1;
+}
+
+.hoverText {  /* ul li a div h3 */
+	width: 100%;
+	color: #FFFFFF;
+	font-size: 1.4em;
+	letter-spacing: 2px;
+	padding: 0 10px;
+  margin: 80% 0; /* center text */
+}
+
+@media only screen and (max-width: 1190px) {
+	.grid li {
+		width: calc(100% / 5);  /* 5 columns */
+	}
+}
+
+@media only screen and (max-width: 945px) {
+	.grid li {
+		width: calc(100% / 4);  /* 4 columns */
+	}
+}
+
+@media only screen and (max-width: 660px) {
+	.grid li {
+		width: calc(100% / 3);  /* 3 columns */
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.grid li {
+		width: calc(100% / 2);  /* 2 columns */
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	.grid li {
+		width: 100%;  /* still yeilds 2 columns */
+	}
+}
